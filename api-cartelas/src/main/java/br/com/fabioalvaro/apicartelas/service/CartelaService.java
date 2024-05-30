@@ -1,13 +1,13 @@
-package br.com.fabioalvaro.api_cartelas.service;
-
-import br.com.fabioalvaro.api_cartelas.entidades.Cartela;
-import br.com.fabioalvaro.api_cartelas.repository.CartelaRepository;
+package br.com.fabioalvaro.apicartelas.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import br.com.fabioalvaro.apicartelas.entidades.Cartela;
+import br.com.fabioalvaro.apicartelas.repository.CartelaRepository;
 
 @Service
 public class CartelaService {

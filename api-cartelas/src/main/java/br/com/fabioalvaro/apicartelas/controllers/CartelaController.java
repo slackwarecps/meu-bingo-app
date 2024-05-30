@@ -1,6 +1,6 @@
-package br.com.fabioalvaro.api_cartelas.controllers;
+package br.com.fabioalvaro.apicartelas.controllers;
 
-import java.util.Arrays;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -11,23 +11,30 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import br.com.fabioalvaro.apicartelas.entidades.Cartela;
+import br.com.fabioalvaro.apicartelas.service.CartelaService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
-import br.com.fabioalvaro.api_cartelas.entidades.Cartela;
-import br.com.fabioalvaro.api_cartelas.service.CartelaService;
+
+
 
 @RestController
-@RequestMapping("/cartela")
+@RequestMapping(value="/cartela", produces={"application/json"})
+@Tag(name = "open-api")
 public class CartelaController {
 
     @Autowired
         private CartelaService cartelaService;
 
+
+  
     @GetMapping("/health")
     public String health() {
         return "Cartela Health v1.0 30-05-2024 07:38";
     }
 
-   
+  
     @GetMapping("/")
     public ResponseEntity<List<Cartela>> getAllCartelas() {
         List<Cartela> cartelas = cartelaService.getAllCartelas();

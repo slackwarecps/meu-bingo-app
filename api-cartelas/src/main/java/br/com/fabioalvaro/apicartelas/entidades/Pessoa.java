@@ -1,4 +1,4 @@
-package br.com.fabioalvaro.api_cartelas.entidades;
+package br.com.fabioalvaro.apicartelas.entidades;
 
 
 import lombok.Getter;
